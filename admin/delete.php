@@ -1,0 +1,167 @@
+<?php session_start();
+include('includes/apply.php');
+    if(isset($_GET['type']))
+    {
+        $type=$_GET['type'];
+    }
+    switch($type){
+        case "services":
+        {
+            if(isset($_GET['service_id']))
+            {
+                $service_id=$_GET['service_id'];
+            }
+            if(isset($_GET['image_name']))
+            {
+                $image_name=$_GET['image_name'];
+            }
+            $path="../images/services/".$image_name;
+            $tbl_name="gtt_02_dtbl_services";
+            $where="service_id='$service_id'";
+        }
+        break;
+        case "banners":
+        {
+            if(isset($_GET['image_id']))
+            {
+                $image_id=$_GET['image_id'];
+            }
+            if(isset($_GET['image_name']))
+            {
+                $image_name=$_GET['image_name'];
+            }
+            $path="../images/banner/".$image_name;
+            $tbl_name="gtt_01_dtbl_images";
+            $where="image_id='$image_id'";
+        }
+        break;
+        case "gallery":
+        {
+            if(isset($_GET['image_id']))
+            {
+                $image_id=$_GET['image_id'];
+            }
+            if(isset($_GET['image_name']))
+            {
+                $image_name=$_GET['image_name'];
+            }
+            $path="../images/gallery/".$image_name;
+            $tbl_name="gtt_01_dtbl_images";
+            $where="image_id='$image_id'";
+        }
+        break;
+        case "pointofcontact":
+        {
+            if(isset($_GET['point_of_contact_id']))
+            {
+                $point_of_contact_id=$_GET['point_of_contact_id'];
+            }
+            $tbl_name="gtt_06_dtbl_point_of_contact";
+            $where="point_of_contact_id='$point_of_contact_id'";
+        }
+        break;
+        case "products":
+        {
+            if(isset($_GET['product_id']))
+            {
+                $product_id=$_GET['product_id'];
+            }
+            $tbl_name="products";
+            $where="product_id='$product_id'";
+        }
+        break;
+        case "reviews":
+        {
+            if(isset($_GET['review_id']))
+            {
+                $review_id=$_GET['review_id'];
+            }
+            if(isset($_GET['image_name']))
+            {
+                $image_name=$_GET['image_name'];
+            }
+            $path="../images/review/".$image_name;
+            $tbl_name="gtt_08_dtbl_reviews";
+            $where="review_id='$review_id'";
+        }
+        break;
+        case "offers":
+        {
+            if(isset($_GET['offer_id']))
+            {
+                $offer_id=$_GET['offer_id'];
+            }
+            if(isset($_GET['image_name']))
+            {
+                $image_name=$_GET['image_name'];
+            }
+            $path="../images/offers/".$image_name;
+            $tbl_name="gtt_03_dtbl_offers";
+            $where="offer_id='$offer_id'";
+        }
+        break;
+        case "associations":
+        {
+            if(isset($_GET['image_id']))
+            {
+                $image_id=$_GET['image_id'];
+            }
+            if(isset($_GET['image_name']))
+            {
+                $image_name=$_GET['image_name'];
+            }
+            $path="../images/partners/".$image_name;
+            $tbl_name="gtt_01_dtbl_images";
+            $where="image_id='$image_id'";
+        }
+        break;
+        break;
+        case "members":
+        {
+            if(isset($_GET['member_id']))
+            {
+                $member_id=$_GET['member_id'];
+            }
+            if(isset($_GET['image_name']))
+            {
+                $image_name=$_GET['image_name'];
+            }
+            $path="../images/members/".$image_name;
+            $tbl_name="gtt_05_dtbl_members";
+            $where="member_id='$member_id'";
+        }
+        break;
+        case "flights":
+        {
+            if(isset($_GET['flight_id']))
+            {
+                $flight_id=$_GET['flight_id'];
+            }
+            $tbl_name="gtt_09_dtbl_flights";
+            $where="flight_id='$flight_id'";
+        }
+        break;
+    }
+    if($image_name!="")
+    {
+        $remove=unlink($path);
+        if(!$remove)
+        {
+            $_SESSION['error']="Failed to delete Image.";
+            header('Location:'.SITEURL.'admin?type='.$type);
+            exit();
+        }
+    }
+    $query=$obj->delete_data($tbl_name,$where);
+    $res=$obj->execute_query($conn,$query);
+    if($res)
+    {
+        $_SESSION['delete']="Successfully deleted.";
+        header('Location:'.SITEURL.'admin?type='.$type);
+    }
+    else
+    {
+        $_SESSION['delete']="Failed to delete.";
+        header('Location:'.SITEURL.'admin?type='.$type);
+    }
+?>

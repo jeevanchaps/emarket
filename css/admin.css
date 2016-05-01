@@ -1,0 +1,359 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+    .error{
+        color: red;
+        border: 1px solid red;
+    }
+    .success{
+        color: green;
+        border: 1px solid green;
+    }
+body{
+    background-color: #FAFAFA;
+    font-size: 95%;
+    text-align: justify;
+    line-height: 25px;
+}
+.header{
+    background-color: #3C3C3C;
+    color: #EFEFCD;
+    text-align: center;
+    margin: 0% 0% 1% 0%;
+    padding: 1% 1%;
+}
+.header img{
+    width: 20%;
+    height: auto;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 90%;
+    clear: both;
+    font-family: arial, 'Lucida Sans Unicode';
+}
+.navbar{
+    width: 20%;
+    height: auto;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: #FFFFFF;
+    color: #4D4D4D;
+    font-size: 1.2em;
+    border: 1px solid silver;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    float: left;
+}
+.navbar .title{
+    color: #1A1A1A;
+    font-weight: bold;
+}
+.navbar ul{
+    list-style-type: none;
+    margin: 0 auto;
+}
+.navbar ul li{
+    margin: 2% 1%;
+    padding: 1% 1%;
+    width: 100%;
+}
+.navbar ul li a{
+    color: #4D4D4D;
+    font-weight: bold;
+}
+.navbar ul li a:hover,.navbar ul li .active{
+    text-decoration: none;
+}
+.navbar ul li button{
+    width: 80px;
+    height: 40px;
+    font-size: 0.8em;
+}
+.menu-trigger-admin{
+    display: none;
+}
+.main{
+    width: 70%;
+    height: auto;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: #FFFFFF;
+    color: #4D4D4D;
+    border: 1px solid silver;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    float: right;
+}
+.main .title{
+    color: #1A1A1A;
+    font-weight: bold;
+}
+.login{
+    width: 30%;
+    height: auto;
+    margin: 1% auto;
+    padding: 1% 1%;
+    background-color: #FFFFFF;
+    color: #4D4D4D;
+    border: 1px solid silver;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-align: center;
+}
+.login input[type="text"], .login input[type="password"]{
+    width: 80%;
+    height: 40px;
+    border: 2px solid silver;
+    border-radius: 5px;
+    margin: 1% auto;
+    padding: 1% 1%;
+    font-size: 1em;
+    color: grey;
+    clear: both;
+}
+.login input[type="submit"]{
+    width: 84%;
+    height: 50px;
+    margin: 1% auto;
+    padding: 2% 2%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.login a{
+    color: #4D4D4D;
+    font-weight: bold;
+}
+.login a:hover{
+    text-decoration: none;
+}
+.footer{
+    clear: both;
+    background-color: #3C3C3C;
+    color: #EFEFCD;
+    text-align: center;
+    margin: 0% 0% 0% 0%;
+    padding: 1% 1%;
+}
+.footer a{
+    color: #FDBD36;
+}
+.footer a:hover{
+    color: #7C96AC;
+}
+#ResponsiveTable{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 99%;
+    margin: 1% auto;
+}
+tr:nth-of-type(odd){
+    background-color: #E8EEF1;
+}
+tr:nth-of-type(even){
+    background-color: #DFDFDF;
+}
+#HeadRow{
+    background-color: #5d5c61;
+    color: white;
+    font-weight: bold;
+}
+#ResponsiveTable td{
+    padding: 5px;
+    border: 1px solid black;
+    text-align: left;
+}
+.main .box{
+    width: 29%;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    border: 1px solid grey;
+    float: left;
+    text-align: center;
+}
+.main .box img{
+    width: 96%;
+    margin: 1% 1%;
+}
+.main label{
+    width: 96%;
+    display: block;
+    border: 1px solid black;
+    padding: 1% 0 1% 0;
+}
+.main label img{
+    width: 50%;
+}
+.main label span{
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding: 2% 2% 0 0;
+}
+.main input[type="text"],[type="email"],[type="phone"],[type="password"]{
+    width: 30%;
+    height: 20px;
+    border: 2px solid silver;
+    border-radius: 5px;
+    margin: 1% auto;
+    padding: 1% 1%;
+    font-size: 0.8em;
+    color: grey;
+    clear: both;
+}
+
+.main textarea{
+    width: 30%;
+    height: 200px;
+    border: 2px solid silver;
+    border-radius: 5px;
+    margin: 1% auto;
+    padding: 1% 1%;
+    font-size: 1.2em;
+    color: grey;
+    clear: both;
+}
+.main input[type="radio"]{
+    margin: 2.5% 0% 0% 0%;
+}
+.main .button{
+    margin: 0% 0% 0% 5%;
+}
+.main .add{
+    padding: 1% 1%;
+    width: 96%;
+    clear: both;
+}
+.main .add input[type="submit"]
+{
+    width: 20%;
+    margin: 0% 0% 0% 12%;
+}
+.main input[type="submit"],[type="reset"]{
+    width: 60%;
+    height: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.main input[type="file"]{
+    width: 40%;
+    height: 50px;
+    cursor: pointer;
+}
+.head{
+    font-size: 1.2em;
+}
+.toggle-box{
+    clear: both;
+    border: 1px solid black;
+    padding: 1% 1%;
+    display: none;
+}
+.menu-trigger-drop{
+        display: block;
+        color: whitesmoke;
+        width: 98%;
+        margin: 1% 0% 0% 0%;
+        background-color: #3C3C3C;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+div .drop-expanded{
+        display: block;
+    }
+
+@media only screen and (max-width: 768px)
+{
+    .login{
+        width: 96%;
+        margin: 0% auto;
+    }
+    .header img{
+        width: 90%;
+    }
+    .navbar{
+        width: 96%;
+        display: none;
+    }
+    .menu-trigger-admin{
+        display: block;
+        color: whitesmoke;
+        width: 94%;
+        background-color: #3C3C3C;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    div .nav-expanded{
+        display: block;
+    }
+    .main{
+        width: 96%;
+        padding: 2% 2%;
+    }
+    .main .box{
+        width: 45%;
+    }
+    .main label{
+        width: 96%;
+        border: 1px solid black;
+        padding: 1% 2%;
+    }
+    .main label span{
+        width: 90%;
+        float: none;
+        text-align: left;
+    }
+    .main input[type="text"],[type="email"],[type="phone"],[type="password"]{
+        width: 95%;
+    }
+    .main input[type="file"]{
+        width: 90%;
+    }
+    .main textarea{
+        width: 95%;
+    }
+    .main .button{
+        margin: 0% 0% 0% 0%;
+    }
+    .main .add{
+        border: 1px solid black;
+        padding: 1% 1%;
+        width: 96%;
+        clear: both;
+    }
+    .main .add input[type="submit"]
+    {
+        width: 50%;
+        height: 40px;
+        margin: 0% 0% 0% 12%;
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+    #ResponsiveTable{
+        font-size: 95%;
+    }
+    #hide{
+        display: none;
+    }
+}
